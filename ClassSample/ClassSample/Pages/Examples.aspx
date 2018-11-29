@@ -44,6 +44,7 @@
 
     </asp:GridView>
         <asp:SqlDataSource ID="GridDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBCursosConnectionString %>" SelectCommand="SELECT * FROM [Ciudad] WHERE IdDepartamento=1 "></asp:SqlDataSource>
+        <asp:Label runat="server" ID="labelexample" Text="Label Example"></asp:Label>
     </form>
     <script src="../Scripts/buttonScript.js"></script>
 </body>  
