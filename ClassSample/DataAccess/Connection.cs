@@ -29,5 +29,27 @@ namespace DataAccess
 
             return table;
         }
+
+        public bool Execute(string query)
+        {
+            try
+            {            
+                sqlConnection.Open();
+
+                SqlCommand command = new SqlCommand(query, sqlConnection);
+            
+                command.ExecuteNonQuery();
+
+                sqlConnection.Close();
+
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+            }
+
+            return true;
+
+        }
     }
 }
