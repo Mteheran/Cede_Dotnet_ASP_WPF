@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ClassSample.Courses.Wpf.UserControls.ucDeparment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClassSample.Courses.Wpf.UserControls"
+             mc:Ignorable="d" >
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Margin="5,5,5,5" HorizontalAlignment="Left" ItemsSource="{Binding Path=Deparments}"  VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre" Width="*" Binding="{Binding Path=Name}">                    
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

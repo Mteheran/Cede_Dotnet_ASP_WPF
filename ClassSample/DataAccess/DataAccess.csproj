@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CityData.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DeparmentData.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Deparment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

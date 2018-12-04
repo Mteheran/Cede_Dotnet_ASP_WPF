@@ -1,0 +1,23 @@
+﻿<Window x:Class="ClassSample.Courses.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassSample.Courses.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="82">
+            <MenuItem Header="Menu">
+                <MenuItem Header="Departamentos" Click="MenuItem_Click" ></MenuItem>
+                <MenuItem Header="Ciudades"  Click="MenuItem_Click_1"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel x:Name="stkMain" Grid.Row="1" Margin="5,5,5,5" />        
+
+    </Grid>
+</Window>

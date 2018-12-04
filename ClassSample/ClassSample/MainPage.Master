@@ -77,6 +77,11 @@
         </aside>
     
     <form id="form1" runat="server">
+          <asp:ScriptManager runat="server">
+            <Scripts>
+             
+            </Scripts>
+        </asp:ScriptManager>
          <div class="page-container">
             <div class="main-content">
                 <div class="section__content section__content--p30">
