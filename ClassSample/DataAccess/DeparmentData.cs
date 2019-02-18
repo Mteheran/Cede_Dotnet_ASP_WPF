@@ -46,6 +46,7 @@ namespace DataAccess
                             WHERE ID = {deparment.ID}
                                 ";
 
+
             Connection con = new Connection();
 
             return con.Execute(query);

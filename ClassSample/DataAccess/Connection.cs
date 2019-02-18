@@ -13,19 +13,53 @@ namespace DataAccess
             sqlConnection.ConnectionString = ConfigurationManager.AppSettings["cnx"].ToString();
         }
 
+        //public DataTable GetData(string query)
+        //{
+        //    sqlConnection.Open();
+
+        //    SqlCommand command = new SqlCommand(query, sqlConnection);
+
+        //    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+        //    DataTable table = new DataTable();
+
+        //    adapter.Fill(table);
+
+        //    sqlConnection.Close();
+
+        //    return table;
+        //}
+
+
         public DataTable GetData(string query)
         {
             sqlConnection.Open();
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
 
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            SqlDataReader reader = command.ExecuteReader();
 
             DataTable table = new DataTable();
 
-            adapter.Fill(table);
+            table.Columns.Add(new DataColumn("ID"));
+            table.Columns.Add(new DataColumn("NombreDepartamento"));
 
-            sqlConnection.Close();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    table.Rows.Add(reader.GetValue(0), reader.GetValue(0));
+                }
+            }
+
+            //SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            //DataTable table = new DataTable();
+
+            //adapter.Fill(table);
+
+            //sqlConnection.Close();
 
             return table;
         }

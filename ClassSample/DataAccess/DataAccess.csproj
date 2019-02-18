@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CityData.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionOleDB.cs" />
     <Compile Include="DeparmentData.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Deparment.cs" />
